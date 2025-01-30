@@ -42,7 +42,7 @@ logger.addHandler(file_handler)
 # st.connection()
 #For ARIMA-Multivariate
 #picking the data from table
-df_bh = pd.read_csv('../data/finaliti.csv')
+df_bh = pd.read_csv('data/finaliti.csv')
 # st.write(df_bh.head(5))
 df_bh = AddingAttributes(df_bh)
 
@@ -142,7 +142,7 @@ def forecast_next_three_years_sari(patient_data, input_columns, forecast_column)
 # patient_name = 303
 
 #FOR ARIMA
-df = pd.read_csv('../data/finaliti.csv')
+df = pd.read_csv('data/finaliti.csv')
 
 #SARIMA-TB3
 sari = (Interpolating(AddingVisits(Staging(AddingAttributes(df)))))
