@@ -21,7 +21,7 @@ st.set_page_config(page_title="Forecaster",layout="wide")
 # st.set_option('deprecation.showPyplotGlobalUse', False)
 
 st.markdown("<h1 style='text-align:center;colour:white;'>Prediction of Dialysis in Patients with Early Kidney Disease</h1>",unsafe_allow_html=True)
-
+st.warning(body="This machine learning model is for research purposes only and should not be used for diagnosing, treating, or to make sole medical decisions . Its predictions are based on limited data and do not replace professional medical expertise. Always consult a qualified healthcare provider for medical concerns or decisions.",icon=":material/info:")
 # tab2,tab3 = st.tabs(["F2","Forcaster III"])
 # tab3 = st.tabs(["Forecaster"])
 # tab1.subheader("ARIMA Type")
@@ -42,7 +42,7 @@ logger.addHandler(file_handler)
 # st.connection()
 #For ARIMA-Multivariate
 #picking the data from table
-df_bh = pd.read_csv('data/finaliti.csv')
+df_bh = pd.read_csv('../data/finaliti.csv')
 # st.write(df_bh.head(5))
 df_bh = AddingAttributes(df_bh)
 
@@ -142,7 +142,7 @@ def forecast_next_three_years_sari(patient_data, input_columns, forecast_column)
 # patient_name = 303
 
 #FOR ARIMA
-df = pd.read_csv('data/finaliti.csv')
+df = pd.read_csv('../data/finaliti.csv')
 
 #SARIMA-TB3
 sari = (Interpolating(AddingVisits(Staging(AddingAttributes(df)))))

@@ -128,12 +128,12 @@ st.markdown(
         </style>
         """, unsafe_allow_html=True
     )
-df = pd.read_csv('data/finaliti.csv')
+df = pd.read_csv('../data/finaliti.csv')
 df = AddingAttributes(df)
 age_l = sorted(list(df['age'].unique()))
 agedf = df.groupby('age')
 st.markdown("<h2 style='text-align:center;colour:white;'><u>Renal Prognosticator: Predicting GFR for New Patient</u></h2>",unsafe_allow_html=True)
-
+st.warning(body="This machine learning model is for research purposes only and should not be used for diagnosing, treating, or to make sole medical decisions . Its predictions are based on limited data and do not replace professional medical expertise. Always consult a qualified healthcare provider for medical concerns or decisions.",icon=":material/info:")
 st.info("It'll predict the GFR for next 3 years with the patient's current test results")
 
 col1,col2 = st.columns([5,5])

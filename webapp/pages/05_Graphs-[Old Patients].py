@@ -6,7 +6,7 @@ from helpers import Pipeline
 st.set_page_config(page_title="Graph Analysis",layout="wide")
 # st.set_option('deprecation.showPyplotGlobalUse', False)
 
-bmis = pd.read_csv('data/finaliti.csv')
+bmis = pd.read_csv('../data/finaliti.csv')
 bmis = Pipeline.AddingAttributes(bmis)
 # st.write(bmis[bmis['id'] == 800])
 
@@ -60,7 +60,7 @@ def creatine(df):
     st.pyplot(fig)
 
 st.markdown("<h2 style='text-align:center;colour:white;'><u>Health Metrics Graphical Analysis: Visualizing Diabetes, BMI, and Creatinine</u></h2>",unsafe_allow_html=True)
-
+st.warning(body="This machine learning model is for research purposes only and should not be used for diagnosing, treating, or to make sole medical decisions . Its predictions are based on limited data and do not replace professional medical expertise. Always consult a qualified healthcare provider for medical concerns or decisions.",icon=":material/info:")
 pid = data["id"].unique()
 col1,col2 = st.columns([2,8])
 with col1:

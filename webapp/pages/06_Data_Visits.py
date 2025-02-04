@@ -18,14 +18,14 @@ st.set_page_config(page_title="Data Visits",layout="wide")
 
 st.markdown("<h2 style='text-align:center;colour:white;'><u>Key Metrics of Patients</u></h2>",unsafe_allow_html=True)
 
-
+st.warning(body="This machine learning model is for research purposes only and should not be used for diagnosing, treating, or to make sole medical decisions . Its predictions are based on limited data and do not replace professional medical expertise. Always consult a qualified healthcare provider for medical concerns or decisions.",icon=":material/info:")
 
 def month_diff(date1, date2):
     return (date2.year - date1.year) * 12 + date2.month - date1.month
 
 
 
-df = pd.read_csv('data/finaliti.csv')
+df = pd.read_csv('../data/finaliti.csv')
 gfr1,gfr2,scr1,scr2,gen,diab,hyper,months,visits,age = list(),list(),list(),list(),list(),list(),list(),list(),list(),list()
 attr = ['glomerular_filration','serum_creatinine_level']
 

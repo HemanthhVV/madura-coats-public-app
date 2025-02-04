@@ -27,9 +27,9 @@ logging.basicConfig(filename="logs.log")
 
 
 # tab = pd.read_csv('Files/GFR_15_vs_Meds.csv')
-low = pd.read_csv('data/whatif_train.csv')
-data = pd.read_csv('data/finaliti.csv')
-meds = pd.read_csv('data/new_table.csv')
+low = pd.read_csv('../data/whatif_train.csv')
+data = pd.read_csv('../data/finaliti.csv')
+meds = pd.read_csv('../data/new_table.csv')
 # tab = convert_to_list(gfr_meds(data=data))
 hypothetical_patient_data = {}
 tab1 = convert_to_list(gfr_meds(data=data))
@@ -249,7 +249,7 @@ x_train, x_test, y_train, y_test = train_test_split(x, y, train_size = 0.8, rand
 model = rf_regressor.fit(x_train, y_train)
 
 st.markdown("<h2 style='text-align:center;colour:white;'><u>New Patient Health Metric Guide: Tailored Suggestions for Optimal Wellness</u></h2>",unsafe_allow_html=True)
-
+st.warning(body="This machine learning model is for research purposes only and should not be used for diagnosing, treating, or to make sole medical decisions . Its predictions are based on limited data and do not replace professional medical expertise. Always consult a qualified healthcare provider for medical concerns or decisions.",icon=":material/info:")
 st.info("It'll make suggestions for the patients with their current data")
 
 col1,col2 = st.columns([5,5])
