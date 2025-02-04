@@ -128,7 +128,7 @@ st.markdown(
         </style>
         """, unsafe_allow_html=True
     )
-df = pd.read_csv('../data/finaliti.csv')
+df = pd.read_csv('data/finaliti.csv')
 df = AddingAttributes(df)
 age_l = sorted(list(df['age'].unique()))
 agedf = df.groupby('age')
