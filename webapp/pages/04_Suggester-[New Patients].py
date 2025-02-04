@@ -27,9 +27,9 @@ logging.basicConfig(filename="logs.log")
 
 
 # tab = pd.read_csv('Files/GFR_15_vs_Meds.csv')
-low = pd.read_csv('../data/whatif_train.csv')
-data = pd.read_csv('../data/finaliti.csv')
-meds = pd.read_csv('../data/new_table.csv')
+low = pd.read_csv('data/whatif_train.csv')
+data = pd.read_csv('data/finaliti.csv')
+meds = pd.read_csv('data/new_table.csv')
 # tab = convert_to_list(gfr_meds(data=data))
 hypothetical_patient_data = {}
 tab1 = convert_to_list(gfr_meds(data=data))

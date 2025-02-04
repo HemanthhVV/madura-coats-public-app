@@ -25,7 +25,7 @@ def month_diff(date1, date2):
 
 
 
-df = pd.read_csv('../data/finaliti.csv')
+df = pd.read_csv('data/finaliti.csv')
 gfr1,gfr2,scr1,scr2,gen,diab,hyper,months,visits,age = list(),list(),list(),list(),list(),list(),list(),list(),list(),list()
 attr = ['glomerular_filration','serum_creatinine_level']
 

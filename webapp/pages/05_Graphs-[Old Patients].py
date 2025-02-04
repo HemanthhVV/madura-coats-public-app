@@ -6,7 +6,7 @@ from helpers import Pipeline
 st.set_page_config(page_title="Graph Analysis",layout="wide")
 # st.set_option('deprecation.showPyplotGlobalUse', False)
 
-bmis = pd.read_csv('../data/finaliti.csv')
+bmis = pd.read_csv('data/finaliti.csv')
 bmis = Pipeline.AddingAttributes(bmis)
 # st.write(bmis[bmis['id'] == 800])
 
